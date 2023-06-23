@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<title>Personal Portfolio Website</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/023620f3c6.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+	<div id="header">
+		<div class="container">
+		<nav>
+			<img src="images/logo.png" class="logo">
+			<ul id="sidemenu">
+				<li><a href="#header">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#portfolio">Portfolio</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+			</ul>
+			<i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+		</nav>
+		<div class="header-text">
+		<p>Newbie Web Developer</p>
+		<h1>Hi, I'm<span> Akshat</span>.</h1>	
+		</div>
+	</div>
+</div>
+<!------------about---------->
+	<div id="about">
+	<div class="container">
+		<div class="row">
+			<div class="about-col-1">
+			
+			<img src="images/user.jpeg">
+			</div>
+			<div class="about-col-2">
+			<h1 class="sub-title">About Me</h1>
+			<p>I am a 20-year-old Brown guy currently pursuing a B.Tech in Computer Science Engineering from Amity University, Gwalior. 
+			While my course of study is focused on technology, I have a wide range of interests that include arts, writing, social media, and music. I enjoy exploring different forms of artistic expression and have a particular passion for writing. I am also highly active on social media, where I enjoy sharing my thoughts and ideas with others. When I am not studying or pursuing my creative interests, you can find me listening to music, which is another great passion of mine.</p>
+ <div class="tab-titles">
+	<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+	<p class="tab-links" onclick="opentab('experience')">Experience</p>
+	<p class="tab-links" onclick="opentab('education')">Education</p>
+	</div>
+	<div class="tab-contents active-tab" id="skills">
+		<ul>
+			<li><span>Deep Learning</span><br>Making Artificial Intelligence Project Models.</li>
+			<li><span>Web Development</span><br>Developing and Hosting Websites.</li>
+			<li><span>Writing</span><br>Creative writing consisting of poetries,haikus,stories.</li>
+		</ul>
+		</div>
+		<div class="tab-contents" id="experience">
+			<ul>
+				<li><span>Project Head</span><br>Drowsiness Alert System Using Deep Learning</li>
+				<li><span>Volunteer</span><br>National Service Scheme</li>
+				<li><span>Explorer</span><br>Under25.com</li>
+			    <li><span>Public Speaker</span><br>Various Occasions at Educational Level</li>	
+			</ul>
+			</div>
+		<div class="tab-contents" id="education">
+			<ul>
+				<li><span>2021-2025</span><br>Bachelor Of Technology in Computer Science Engineering</li>
+				<li><span>2021-2025</span><br>Minor Certification in Artificial Intelligence & Machine Learning</li>
+               </ul>
+			</div>
+		</div>
+		</div>
+		</div>
+	</div>
+	<!----------portfolio--->
+	<div id="portfolio">
+		<div class="container">
+			<h1 class="sub-title">My work</h1>
+			<div class="work-list">
+<div class="work">
+
+	<img src="images/work1.png">
+	<div class="layer">
+  <h3>Projects Based On Drowsiness Alert System</h3>
+  <p> A deep learning model used to alert the drivers,reducing the risks of accidents.</p>
+</div>
+</div>
+<div class="work">
+
+	<img src="images/work2.png">
+	<div class="layer">
+		<h3>Web Development</h3>
+		<p>Portfolio website which you are accessing currently.</p>
+	  </div>
+</div>
+<div class="work">
+
+	<img src="images/work3.png">
+	<div class="layer">
+		<h3>Creative Writing</h3>
+		<p> Known to Close ones piece of writings.</p>
+	  </div>
+</div>
+
+			</div>
+		</div>
+	</div>
+	<!------contact------------------> 
+	<div id="contact">
+		<div class="container">
+<div class="row">
+<div class="contact-left">
+	<h1 class="sub-title">Contact Me</h1>
+	<p><i class="fa-solid fa-phone"></i>+917999xxxxxx</p>
+	<p><i class="fa-brands fa-google"></i>akshat27dec@gmail.com</p>
+	<div class="social-icons">
+
+		<a href="https://www.linkedin.com/in/akshat-shrivastava-269880232/"><i class="fa-brands fa-linkedin"></i></a>
+		<a href="https://open.spotify.com/user/31p2kob77yjmfogjppy6l73lgpzy?si=0aace53227cf4f33"><i class="fa-brands fa-spotify"></i></a>
+
+	</div>
+	<a href="images/Akshat Shrivastava - Resume.pdf" download class="btn">Download Resume</a>
+</div>
+<div class="contact-right">
+	<form name="submit-to-google-sheet">
+		<input type="text" name="Name" placeholder="Your Name" required>
+		<input type="email" name="email" placeholder="Your Email" required>
+		<textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+		<button type="submit" class="btn">Submit</button>
+	</form>
+	<span id="msg"></span>
+</div>
+
+</div>
+
+		</div>
+		<div class="copyright">
+			<p>Copyright © Akshat🖤.</p>
+		</div>
+	</div>
+	<script>
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+	function opentab(tabname){
+		for(tablink of tablinks){
+			tablink.classList.remove("active-link");
+		}
+		for(tablink of tabcontents){
+			tablink.classList.remove("active-tab");
+		}
+		event.currentTarget.classList.add("active-link");
+	    document.getElementById(tabname).classList.add("active-tab");
+	}
+	</script>
+	<script>
+var sidemenu = document.getElementById("sidemenu")
+function openmenu(){
+
+	sidemenu.style.right ="0";
+}
+function closemenu(){
+	sidemenu.style.right ="-200px";
+}
+</script>
+
+<script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbw-GjK5clFBg5UBlgx5Ve_Vq9yR2xJgxwoVuggVt-Sx7yXenSnSyV4YQJNegqvpXB9kVw/exec'
+	const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+	form.addEventListener('submit', e => {
+	  e.preventDefault()
+	  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+		.then(response =>{
+			msg.innerHTML = "Message sent successfully"
+		setTimeout(function(){
+			msg.innerHTML=""
+
+		},5000)
+		form.reset()
+		})
+		.catch(error => console.error('Error!', error.message))
+	})
+  </script>
+	</body>
+	</html>
